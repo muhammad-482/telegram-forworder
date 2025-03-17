@@ -21,7 +21,7 @@ api_id = st.secrets["api_id"]
 api_hash = st.secrets["api_hash"]
 phone_number = st.secrets["phone_number"]
 
-print("hello")
+
 # class TelegramForwarder:
 #     def __init__(self, api_id=api_id, api_hash=api_hash, phone_number=phone_number):
 #         print(f"api_id: {api_id}, api_hash: {api_hash}, phone_number: {phone_number}")
@@ -114,8 +114,8 @@ print("hello")
 #             print("Waiting for the next check...")
 #             await asyncio.sleep(5)
 
-# async def main():
-
+async def main():
+    print("hello")
 #     api_id = st.secrets["api_id"]
 #     api_hash = st.secrets["api_hash"]
 #     phone_number = st.secrets["phone_number"]
@@ -146,8 +146,8 @@ print("hello")
 
 
 # # Start the event loop and run the main function
-# if __name__ == "__main__":
-#     asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())
 
 
 
