@@ -14,9 +14,9 @@ import pandas as pd
 
 
 
-api_id = st.secrets["api_id"]
-api_hash = st.secrets["api_hash"]
-phone_number = st.secrets["phone_number"]
+# api_id = st.secrets["api_id"]
+# api_hash = st.secrets["api_hash"]
+# phone_number = st.secrets["phone_number"]
 
 # class TelegramForwarder:
 #     def __init__(self, api_id=api_id, api_hash=api_hash, phone_number=phone_number):
