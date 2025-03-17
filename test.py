@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+
  
 
 
@@ -11,11 +12,11 @@ import pandas as pd
 # import os
 # from handling_file import *
 
-# api_id = "26036505"
-# api_hash = "f4e985bfde7566b3eaa96aac2cae5099"
-# phone_number = "249902830877"
 
 
+api_id = st.secrets["api_id"]
+api_hash = st.secrets["api_hash"]
+phone_number = st.secrets["phone_number"]
 
 # class TelegramForwarder:
 #     def __init__(self, api_id=api_id, api_hash=api_hash, phone_number=phone_number):
