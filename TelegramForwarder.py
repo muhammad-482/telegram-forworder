@@ -73,15 +73,13 @@ class TelegramForwarder:
                     add_or_update_chat(source,message.id - 2)
                     last_message_id  = get_last_message(source)
                 
-                print("0----------last_message_id:  ",last_message_id)
+            
                 messages = await self.client.get_messages(source, min_id=last_message_id , limit=None)
-                print("1-------------messages: ",messages)
+                
 
                 
                 for message in reversed(messages):
-                    # Check if the message text includes any of the keywords
-                    print("iaam here ")
-                    print("iaam here 2--------------Message: ",message)
+
                     if keywords:
                         print("inside keywords")
                         if message.text and any(keyword in message.text.lower() for keyword in keywords):
@@ -113,29 +111,29 @@ async def main():
     forwarder = TelegramForwarder(api_id, api_hash, phone_number)
     await forwarder.client.start()
     
-    print("Choose an option:")
-    print("1. List Chats")
-    print("2. Forward Messages")
+    # print("Choose an option:")
+    # print("1. List Chats")
+    # print("2. Forward Messages")
     
-    choice = input("Enter your choice: ")
+    # choice = input("Enter your choice: ")
     
-    if choice == "1":
-        await forwarder.list_chats()
-    elif choice == "2":
+    # if choice == "1":
+    #     await forwarder.list_chats()
+    # elif choice == "2":
 
-        sources = [int(-4762190522),int(-1001197273212),int(-4745617547)]
-        # sources = [int(--1001197273212)]
-        
-        destination_channel_id = int(-4708671429)
-        
-        
-        print("Enter keywords if you want to forward messages with specific keywords, or leave blank to forward every message!")
-        keywords = input("Put keywords (comma separated if multiple, or leave blank): ").split(",")
+    sources = [int(-4762190522),int(-1001197273212),int(-4745617547)]
+    # sources = [int(--1001197273212)]
+    
+    destination_channel_id = int(-4708671429)
+    
+    
+    # print("Enter keywords if you want to forward messages with specific keywords, or leave blank to forward every message!")
+    # keywords = input("Put keywords (comma separated if multiple, or leave blank): ").split(",")
+    # print("---------Keywords",keywords)
+    await forwarder.forward_messages_to_channel(sources,destination_channel_id, keywords=[""])
 
-        await forwarder.forward_messages_to_channel(sources,destination_channel_id, keywords)
-
-    else:
-        print("Invalid choice")
+    # else:
+    #     print("Invalid choice")
 
 # Start the event loop and run the main function
 if __name__ == "__main__":
