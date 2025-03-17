@@ -12,7 +12,10 @@ import json
 import os
 from handling_file import *
 
-
+st.write("""
+# My first app after add secr and code added
+Hello *world!*
+""")
 
 api_id = st.secrets["api_id"]
 api_hash = st.secrets["api_hash"]
@@ -150,7 +153,4 @@ if __name__ == "__main__":
 
 
 
-st.write("""
-# My first app after add secr
-Hello *world!*
-""")
+
