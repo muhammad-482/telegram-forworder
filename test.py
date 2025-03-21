@@ -130,7 +130,7 @@ async def main():
     #     await forwarder.list_chats()
     # elif choice == "2":
 
-    sources = [int(-4762190522),int(-1001197273212),int(-4745617547)]
+    sources = [int(-4762190522),int(-4745617547)]
     # sources = [int(--1001197273212)]
     
     destination_channel_id = int(-4708671429)
