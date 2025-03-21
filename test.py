@@ -116,9 +116,6 @@ class TelegramForwarder:
 
 async def main():
 
-    api_id = "26036505"
-    api_hash = "f4e985bfde7566b3eaa96aac2cae5099"
-    phone_number = "249902830877"
 
     forwarder = TelegramForwarder(api_id, api_hash, phone_number)
     await forwarder.client.start()
